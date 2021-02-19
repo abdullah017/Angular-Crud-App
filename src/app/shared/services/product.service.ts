@@ -2,14 +2,15 @@ import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product-model';
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
   
-  baseUrl = environment.baseUrl;
+  // baseUrl = environment.baseUrl;
+  baseUrl =  `${environment.baseUrl}/products`;
   constructor(private http: HttpClient) {}
 
   getProducts():Observable<Product[]> {

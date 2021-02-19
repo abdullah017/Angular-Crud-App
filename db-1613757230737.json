@@ -31,24 +31,6 @@
       "name": "abdullah",
       "email": "abdullah@mail.com",
       "password": "123456"
-    },
-    {
-      "name": "ahmet",
-      "email": "ahmet@mail.com",
-      "password": "123456",
-      "id": 2
-    },
-    {
-      "name": "mehmet",
-      "email": "mehmet@mail.com",
-      "password": "1234444",
-      "id": 3
-    },
-    {
-      "name": "asdas",
-      "email": "aasdasd@mail.com",
-      "password": "asfasdgfsdg",
-      "id": 4
     }
   ]
 }

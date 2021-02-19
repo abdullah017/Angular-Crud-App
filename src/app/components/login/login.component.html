@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ABC GİRİŞ SAYFASI</title>
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" (submit)="onSubmit()">
+      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+     
+      <h1 class="h3 mb-3 font-weight-normal">Lütfen giriş yapın</h1>
+     
+      <label for="inputEmail" class="sr-only">E-Posta</label>
+      <input type="email" 
+             id="inputEmail" 
+             name="email"
+             class="form-control" 
+             placeholder="Email address" 
+             [(ngModel)]="user.email" 
+             required 
+             autofocus>
+     
+      <label for="inputPassword" class="sr-only">Parola</label>
+      <input type="password" 
+             id="inputPassword" 
+             name="password"
+             class="form-control" 
+             placeholder="Password" 
+             [(ngModel)]="user.password" 
+             required>
+     
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş Yap</button>
+      <button class="btn btn-lg btn-info btn-block" type="submit" (click)="register()">Kayıt Ol</button>
+     
+      <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+    </form>
+  </body>
+</html>

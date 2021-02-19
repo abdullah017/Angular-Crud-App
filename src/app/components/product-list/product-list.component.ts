@@ -1,8 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/shared/services/product-service';
+import { ProductService } from 'src/app/shared/services/product.service';
 import { environment } from 'src/environments/environment';
-import { Product } from 'src/app/shared/models/product-model';
+import { Product } from 'src/app/shared/models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -11,7 +11,8 @@ import { Product } from 'src/app/shared/models/product-model';
 })
 export class ProductListComponent implements OnInit {
 
-  baseUrl = environment.baseUrl;
+  // baseUrl = environment.baseUrl;
+  baseUrl =  `${environment.baseUrl}/products`;
   products: Product[] = [];
   constructor(
     private productService: ProductService,
@@ -46,3 +47,4 @@ export class ProductListComponent implements OnInit {
 
 
 }
+//ben product-model.ts yapmışım onu düzeltiyorum da :)

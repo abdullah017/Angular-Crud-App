@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from 'src/app/shared/models/product-model';
-import { ProductService } from 'src/app/shared/services/product-service';
+import { Product } from 'src/app/shared/models/product.model';
+import { ProductService } from 'src/app/shared/services/product.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {   productForm: any;
-   baseUrl = environment.baseUrl;
+  baseUrl =  `${environment.baseUrl}/products`;
    selectedId : number = 0;
    product:Product | null = null;
 

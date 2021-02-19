@@ -1,4 +1,4 @@
-import { ProductService } from 'src/app/shared/services/product-service';
+import { ProductService } from 'src/app/shared/services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';

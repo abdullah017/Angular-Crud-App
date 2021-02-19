@@ -10,6 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AuthService } from './shared/services/auth.service';
+import { LoginGuard } from './components/login/login.guard';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ProductCreateComponent,
     HomeComponent,
     ProductEditComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductService } from 'src/app/shared/services/product-service';
+import { ProductService } from 'src/app/shared/services/product.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductEditComponent implements OnInit {
   productForm: any;
-  baseUrl = environment.baseUrl;
+  baseUrl =  `${environment.baseUrl}/products`;
   selectedId : number = 0;
   constructor(
     private productService:ProductService,

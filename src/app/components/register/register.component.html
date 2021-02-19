@@ -1,0 +1,58 @@
+
+
+  <body class="text-center">
+    <form  [formGroup]="registerForm" >
+      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+     
+      <h1 class="h3 mb-3 font-weight-normal">Lütfen kayıt yapın</h1>
+
+      <label for="name" class="sr-only">Adınız</label>
+      <input type="text" 
+             id="inputName" 
+             name="name"
+             class="form-control" 
+             formControlName="name"
+             placeholder="Name" 
+             required 
+             autofocus>
+             <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('name').hasError('required') && 
+             registerForm.get('name').touched">Lütfen adınızı girin!
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('name').hasError('minlength') && 
+            registerForm.get('name').touched"> 3 karakterden az ürün adı giremezsiniz! 
+            </div>
+
+      <label for="email" class="sr-only">E-Posta</label>
+      <input type="email" 
+             id="inputEmail" 
+             name="email"
+             class="form-control" 
+             formControlName="email"
+             placeholder="Email address" 
+             required 
+             autofocus>
+             <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('email').hasError('required') && 
+             registerForm.get('email').touched">Lütfen e-postanızı girin!
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('email').hasError('email') && 
+            registerForm.get('email').touched"> Lütfen e-postanızı doğru biçimde girin! 
+            </div>
+      <label for="password" class="sr-only">Parola</label>
+      <input type="password" 
+             id="inputPassword" 
+             name="password"
+             class="form-control" 
+             formControlName="password"
+             placeholder="Password" 
+             required>
+             <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('password').hasError('required') && 
+             registerForm.get('password').touched">Lütfen parolanızı girin!
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="registerForm.get('password').hasError('minlength') && 
+            registerForm.get('password').touched"> 3 karakterden az parola giremezsiniz! 
+            </div>
+      <button class="btn btn-lg btn-primary btn-block" [disabled]="!registerForm.valid" type="submit"(click)="saveUser()">Kayıt Ol</button>
+     
+      <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+    </form>
+  </body>
