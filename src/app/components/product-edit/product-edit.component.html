@@ -1,0 +1,67 @@
+<form [formGroup]="productForm">
+    <div class="form-group">
+      <label for="name">ÜRÜN ADI</label>
+      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Product Name">
+    
+      <!--CONTROL AND VALIDATION-->
+      <div class="alert alert-danger" role="alert" *ngIf="productForm.get('name').hasError('required') && 
+       productForm.get('name').touched">Lütfen ürün adı girin!
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="productForm.get('name').hasError('minlength') && 
+     productForm.get('name').touched"> 4 karakterden az ürün adı giremezsiniz! 
+      </div>
+      <!--CONTROL AND VALIDATION -END- -->
+    </div>
+  
+    <div class="form-group" #category>
+      <label for="exampleInputEmail1">KATEGORİ</label>
+      <input type="text" class="form-control" id="category" formControlName="category" placeholder="Enter category Name">
+  
+      <div class="alert alert-danger" role="alert" *ngIf="productForm.get('category').hasError('required') && 
+     productForm.get('category').touched"> Lütfen ürün kategorisini girin!
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="productForm.get('category').hasError('minlength') && 
+   productForm.get('category').touched"> 4 karakterden az kategori adı giremezsiniz! 
+      </div>
+  
+    </div>
+  
+    <div class="form-group" #description>
+      <label for="exampleInputEmail1">AÇIKLAMA</label>
+      <input type="text" class="form-control" id="description" formControlName="description"
+        placeholder="Enter category Name">
+  
+        <div class="alert alert-danger" role="alert" *ngIf="productForm.get('description').hasError('required') && 
+        productForm.get('description').touched"> Lütfen ürün açıklama yazın!
+         </div>
+         <div class="alert alert-danger" role="alert" *ngIf="productForm.get('description').hasError('minlength') && 
+      productForm.get('description').touched"> 4 karakterden az açıklama yazamazsınız! 
+         </div>
+  
+    </div>
+
+    <div class="form-group" #price>
+      <label for="price">FİYAT</label>
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">$</span>
+      
+      <input type="text" class="form-control" id="price" formControlName="price"
+        placeholder="Enter category Name">
+        <div class="alert alert-danger" role="alert" *ngIf="productForm.get('price').hasError('required') && 
+        productForm.get('price').touched"> Lütfen ürün fiyatını yazın!
+         </div>
+        </div>
+    </div>
+
+    <div class="form-group" #imagePath>
+      <label for="price">RESİM</label>
+      <input type="text" class="form-control" id="imagePath" formControlName="imagePath"
+        placeholder="Enter category Name">
+        <div class="alert alert-danger" role="alert" *ngIf="productForm.get('imagePath').hasError('required') && 
+        productForm.get('imagePath').touched"> Lütfen ürün fiyatını yazın!
+         </div>
+    </div>  
+
+    <button type="submit" [disabled]="!productForm.valid" class="btn btn-primary" 
+    (click)="updateProduct()">Submit</button>
+  </form>

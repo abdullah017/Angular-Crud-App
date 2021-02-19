@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone X",
+      "category": "TELEFON",
+      "description": "BU BİR YENİ MODEL İPHONE ",
+      "price": "5895",
+      "imagePath": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/v2-87944-30_large.jpg"
+    },
+    {
+      "name": "Lenovo",
+      "category": "Computer",
+      "description": "Ideapad 320",
+      "price": "2300",
+      "id": 2,
+      "imagePath": "https://lallahoriye.com.tirzee.com/wp-content/uploads/2019/04/Product_Lg_Type.jpg"
+    },
+    {
+      "name": "Çamaşır Makinesi2",
+      "category": "TELEFON",
+      "description": "ÇAMAŞIR MAKİNES",
+      "price": "7500",
+      "id": 3,
+      "imagePath": "https://lallahoriye.com.tirzee.com/wp-content/uploads/2019/04/Product_Lg_Type.jpg"
+    }
+  ]
+}

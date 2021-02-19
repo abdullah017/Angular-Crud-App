@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<table class="table" *ngIf="products">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">NAME</th>
+        <th scope="col">CATEGORY</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">ACTION</th>
+        <th scope="col"> <button  [routerLink]="['/create']">ADD</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        <td><button class="btn btn-danger" (click)="deleteOnClick(product.id)">Delete</button>
+            <button class="btn btn-warning" 
+            (click)="updateOnClick(product.id)"style="margin-left: 10px">Update</button>
+            <button class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="card-deck">
+  <div class="card" *ngFor="let product of products">
+    <img class="card-img-top" src={{product.imagePath}} width="150" height="400" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <p class="card-text">{{product.category}}</p>
+      <p class="card-text">{{product.price | currency }}</p>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group">
+
+        <button type="button" class="btn btn-sm btn-outline-secondary"
+        (click)="onClickView(product.id,product.name,product.category)">Görüntüle</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary"
+        (click)="onClickEdit(product.id,product.name,product.category)">Düzenle</button> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <button type="button" class="btn btn-sm btn-outline-secondary"
+(click)="onClickView(product.id)">Görüntüle</button>
+<button type="button" class="btn btn-sm btn-outline-secondary"
+(click)="onClickEdit(product.id)">Düzenle</button> 
+
+   <a [routerLink]="['/edit',product.id,product.name]">GÖRÜNTÜLE</a>
+
+
+-->

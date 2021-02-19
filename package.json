@@ -7,11 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "json-server": "json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.0.4",
+    "@angular/animations": "file:node_modules/@angular/animations",
     "@angular/common": "~11.0.4",
     "@angular/compiler": "~11.0.4",
     "@angular/core": "~11.0.4",
@@ -19,6 +20,9 @@
     "@angular/platform-browser": "~11.0.4",
     "@angular/platform-browser-dynamic": "~11.0.4",
     "@angular/router": "~11.0.4",
+    "angular-toastr": "^2.1.1",
+    "bootstrap": "^4.6.0",
+    "json-server": "^0.16.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
