@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Neler Var ?
+
+--Angular CrudAppTwo. 
+*Uygulama içerisindeki veriler JSON-SERVER kullanılarak elde edilmiştir. Görüntüleme,ekleme,silme,güncelleme işlemleri oluşturmuş olduğum db.json üzerinde etkili olmaktadır.
+*Uygulamaya giriş,çıkış,routerguard olayları tamamen local olarak gerçekleştirilip,simüle edilmektedir. Giriş yapan kullanıcıları local storage üzerinde tutuyoruz.Çıkış yaptığında da local storage üzerinden siliyoruz. 
+
+## Nelek eklenmeyi düşünüyorum?
+  *Admin dashboard
+  *Kullanıcı rolleri
+  
