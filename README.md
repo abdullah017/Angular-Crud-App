@@ -31,6 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 --Angular CrudAppTwo. 
 *Uygulama içerisindeki veriler JSON-SERVER kullanılarak elde edilmiştir. Görüntüleme,ekleme,silme,güncelleme işlemleri oluşturmuş olduğum db.json üzerinde etkili olmaktadır.
+*Local storage üzerinden gerçekleşen giriş-çıkış-kayıt olma olayları.
 *Uygulamaya giriş,çıkış,routerguard olayları tamamen local olarak gerçekleştirilip,simüle edilmektedir. Giriş yapan kullanıcıları local storage üzerinde tutuyoruz.Çıkış yaptığında da local storage üzerinden siliyoruz. 
 
 ## Nelek eklenmeyi düşünüyorum?
